@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+        "sourceMap": true,
+        "noImplicitAny": true,
+        "allowSyntheticDefaultImports": true,
+        "target": "es6",
+        "module": "es6",
+        "moduleResolution": "node",
+        "jsx": "preserve",
+        "outDir": "./dist/",
+        "baseUrl": "src"
+        
+    },
+    "include" :  ["src/**/*"],
+    "exclude": [
+        "node_modules",
+        "**/*.spec.ts"
+    ]
+}
