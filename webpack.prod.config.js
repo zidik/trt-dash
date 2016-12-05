@@ -9,13 +9,19 @@ module.exports = {
     },
     output: {
         filename: "[name].js",
-        path: path.resolve(__dirname, "dist")
+        path: path.resolve(__dirname, "public"),
+        publicPath: '/public/'
     },
 
 
     plugins: [
         //new webpack.optimize.UglifyJsPlugin(),
         new webpack.NamedModulesPlugin(),
+        new webpack.DefinePlugin({
+            'process.env': {
+                'NODE_ENV': JSON.stringify('production')
+            }
+        })
     ],
 
     module: {
